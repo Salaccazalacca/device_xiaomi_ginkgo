@@ -29,6 +29,10 @@
 
 import /vendor/etc/init/hw/init.fingerprint.rc
 
+on boot
+    # DT2W
+    chmod 0660 /sys/touchpanel/double_tap
+    
 on property:ro.boot.hwversion=*
     setprop vendor.boot.hwversion ${ro.boot.hwversion}
 

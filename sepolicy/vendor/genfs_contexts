@@ -2,6 +2,9 @@
 genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/idle_state    u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display                u:object_r:vendor_sysfs_graphics:s0
 
+# DT2W
+genfscon sysfs /touchpanel u:object_r:sysfs_touchpanel:s0
+
 # UFS
 genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
 
