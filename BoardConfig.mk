@@ -79,6 +79,9 @@ TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig vendor/ginkgo.config vendo
 # Media
 TARGET_USES_ION := true
 
+# MiuiCamera
+-include device/xiaomi/miuicamera-ginkgo/BoardConfig.mk
+
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4831838208
 BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736

@@ -149,6 +149,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(DEVICE_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml
 
+# MiuiCamera
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-ginkgo/device.mk)
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
