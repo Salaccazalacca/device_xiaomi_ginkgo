@@ -1,14 +1,26 @@
 [
-  {
-    "repository": "hardware_xiaomi",
-    "target_path": "hardware/xiaomi"
+   {
+    "repository": "vendor_xiaomi_ginkgo",
+    "target_path": "vendor/xiaomi/ginkgo"
   },
   {
     "repository": "kernel_xiaomi_sm6125",
     "target_path": "kernel/xiaomi/sm6125"
   },
   {
-    "repository": "vendor_xiaomi_ginkgo",
-    "target_path": "vendor/xiaomi/ginkgo"
+    "repository": "hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "repository": "hardware_dolby",
+    "target_path": "hardware/dolby"
+  },
+  {
+    "repository": "device_xiaomi_miuicamera-ginkgo",
+    "target_path": "device/xiaomi/miuicamera-ginkgo"
+  },
+  {
+    "repository": "vendor_xiaomi_miuicamera-ginkgo",
+    "target_path": "vendor/xiaomi/miuicamera-ginkgo"
   }
 ]
