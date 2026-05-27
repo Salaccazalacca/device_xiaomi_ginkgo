@@ -1,6 +1,14 @@
 [
   {
-    "repository": "android_device_xiaomi_sm6125-common",
-    "target_path": "device/xiaomi/sm6125-common"
+    "repository": "hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
+    "repository": "kernel_xiaomi_sm6125",
+    "target_path": "kernel/xiaomi/sm6125"
+  },
+  {
+    "repository": "vendor_xiaomi_ginkgo",
+    "target_path": "vendor/xiaomi/ginkgo"
   }
 ]

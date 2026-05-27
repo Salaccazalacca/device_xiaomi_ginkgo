@@ -21,19 +21,33 @@ namespace_imports = [
     'hardware/qcom-caf/sm8150',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
-    'vendor/qcom/opensource/display',
-    'vendor/xiaomi/sm6125-common',
+    'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/opensource/display',    
 ]
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'com.qualcomm.qti.dpm.api@1.0',
+        'libmmosal',
+        'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.imsrtpservice@3.0',
+    ): lib_fixup_vendor_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+    'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
+        .add_line_if_missing('gettid: 1'),        
     'vendor/lib/miwatermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     'vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so': blob_fixup()
         .remove_needed('libhidlbase.so')
         .replace_needed('libhidltransport.so', 'libhidlbase-v32.so'),
+    ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
+        .add_needed('libcrypto_shim.so'),        
     'vendor/lib/libalLDC.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
@@ -59,7 +73,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(
-        module, 'sm6125-common', module.vendor
-    )
+    utils = ExtractUtils.device(module)
     utils.run()

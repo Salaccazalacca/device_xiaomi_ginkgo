@@ -1,0 +1,10 @@
+# Fingerprint
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                 u:object_r:hal_fingerprint_hwservice:s0
+vendor.qti.hardware.fingerprintext::IWTFingerprint                                      u:object_r:hal_fingerprint_hwservice:s0
+vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint                         u:object_r:hal_fingerprint_hwservice:s0
+
+# RIL
+vendor.qti.hardware.radio.qcriNvOpt::IqcriNvOpt					u:object_r:hal_rilnv_hwservice:s0
+
+# NFC
+vendor.nxp.nxpese::INxpEse                                    u:object_r:nxpese_hwservice:s0

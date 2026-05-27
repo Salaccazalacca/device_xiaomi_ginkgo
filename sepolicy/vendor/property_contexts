@@ -1,0 +1,34 @@
+# Aware
+ro.vendor.aware_available                       u:object_r:vendor_aware_available_prop:s0
+
+# Camera
+camera.                                         u:object_r:vendor_camera_prop:s0
+camerai.                                        u:object_r:vendor_camera_prop:s0
+camera_screen_light_delay                       u:object_r:vendor_camera_prop:s0
+persist.camera.                                 u:object_r:vendor_camera_prop:s0
+persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
+ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
+ro.camera.                                      u:object_r:vendor_camera_prop:s0
+vendor.camera.                                  u:object_r:vendor_camera_prop:s0
+
+# Fastbootd
+ro.fastbootd.available                          u:object_r:exported_default_prop:s0
+
+# Fingerprint
+gf.debug.                                       u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.sys.fp.                          u:object_r:vendor_fingerprint_prop:s0
+persist.sys.fp.                                 u:object_r:vendor_fingerprint_prop:s0
+ro.hardware.fp                                  u:object_r:vendor_fingerprint_prop:s0
+ro.boot.fpsensor                                u:object_r:vendor_fingerprint_prop:s0
+sys.panel.display                               u:object_r:vendor_fingerprint_prop:s0
+vendor.fps_hal.                                 u:object_r:vendor_fingerprint_prop:s0
+vendor.panel.display                            u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.fingerprint.                     u:object_r:vendor_fingerprint_prop:s0
+sys.fp.vendor                                   u:object_r:vendor_fingerprint_prop:s0
+
+# RIL
+ro.product.wt.boardid                           u:object_r:exported_system_prop:s0
+
+# Thermal
+sys.thermal.                                    u:object_r:vendor_thermal_normal_prop:s0
+persist.sys.thermal.                            u:object_r:vendor_thermal_normal_prop:s0
